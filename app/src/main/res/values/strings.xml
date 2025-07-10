@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">Hello World</string>
+    <string name="app_name">Twitter Clone</string>
     <string name="new_page">New Page</string>
 </resources>

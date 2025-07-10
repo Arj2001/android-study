@@ -37,6 +37,14 @@
         android:layout_marginTop="50dp"
         android:inputType="text"
         android:hint="Your name" />
+    <EditText
+        android:id="@+id/txt2"
+        android:layout_width="157dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:inputType="text"
+        android:hint="Password" />
 
     <Button
         android:id="@+id/button1"

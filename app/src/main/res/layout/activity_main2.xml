@@ -9,7 +9,15 @@
     tools:context=".MainActivity2">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/userView"
+        android:layout_width="178dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="50dp"
+        android:text="@string/new_page"
+        android:textSize="24sp" />
+    <TextView
+        android:id="@+id/passView"
         android:layout_width="178dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

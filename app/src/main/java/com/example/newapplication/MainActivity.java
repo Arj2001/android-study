@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        btn = findViewById(R.id.button1);
+        btn = findViewById(R.id.chngPg);
         edt1 = findViewById(R.id.txt1);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,8 +38,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        findViewById(R.id.chngPg).setOnClickListener(v -> {
+        findViewById(R.id.button1).setOnClickListener(v -> {
            Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+
+           EditText pass = findViewById(R.id.txt2);
+           intent.putExtra("username",edt1.getText().toString());
+           intent.putExtra("password",pass.getText().toString());
            startActivity(intent);
         });
 

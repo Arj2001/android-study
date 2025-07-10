@@ -2,6 +2,7 @@ package com.example.newapplication;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,11 +17,19 @@ public class MainActivity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main2);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+//        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+//            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+//            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+//            return insets;
+//        });
+        Intent intent = getIntent();
+        String username = intent.getStringExtra("username");
+        String password = intent.getStringExtra("password");
+        TextView ut = findViewById(R.id.userView);
+        TextView pt = findViewById(R.id.passView);
+
+        ut.setText(username);
+        pt.setText(password);
         findViewById(R.id.btn1).setOnClickListener(v -> {
             startActivity(new Intent(MainActivity2.this, MainActivity.class));
         });
